@@ -31,7 +31,7 @@ mongoose
   .connect(dbURI)
   .then(() => {
     console.log("Connected to MongoDB");
-    app.listen(5000, () => {
+    app.listen(process.env.PORT || 5000, () => {
       console.log(`Server is listening on Port 5000`);
     });
   })
